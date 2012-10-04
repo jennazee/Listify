@@ -1,0 +1,79 @@
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	font-weight: 300;
+}
+
+.list {
+	width: 500px;
+	margin: 0 auto;
+	background-color: #f8ffa7;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #333;
+}
+
+p {
+	margin: 0;
+}
+
+.item{
+	padding: 10px;
+}
+
+.itemedit, .newItem {
+	font-size: 1em;
+	clear: both;
+	float: none;
+	display: block;
+	margin: 15px 10px;
+}
+
+.titleedit, .newtitle {
+	padding: 5px;
+	float: left;
+	font-size: 1.17em;
+	display: block;
+}
+
+h1 {
+	font-weight: normal;
+	text-align: center;
+}
+
+h3 {
+	padding: 5px;
+	float: left;
+	margin: 0;
+}
+
+.options-button {
+	display: inline-block;
+	font-size: 0.75em;
+	background-color: #999;
+	border-radius: 5px;
+	padding: 5px;
+	margin-left: 300px;
+	margin-top: 5px;
+}
+
+.button {
+	background-color: #999;
+	border-radius: 5px;
+	padding: 5px;
+	width: 80px;
+	margin: 10px auto;
+}
+
+.button:hover, .options-button:hover {
+	background-color: #888;
+	cursor: pointer;
+}
+
+#newList {
+	width: 70px;
+	margin-top: 30px;
+}
+
+.listHeader {
+	height: 35px;
+	border-bottom: 1px solid blue;
+}
