@@ -88,7 +88,9 @@ window.AppView = Backbone.View.extend({
       	allItems.bind('refresh', this.addAll);
       	allItems.bind('all', this.render);
     
-      	allItems.fetch();
+      	allItems.fetch(
+      		{success: this.addAll}
+      	);
     },
 
     addOne: function(item) {
@@ -97,7 +99,6 @@ window.AppView = Backbone.View.extend({
     },
 
     addOnEnter: function(e){
-    	console.log('hey')
     	if (e.keyCode === 13){
 	      	allItems.create({
 	        	'item': this.input.val(),
@@ -113,12 +114,5 @@ window.AppView = Backbone.View.extend({
 
 });
 
-window.playItem = new Item;
 window.App = new AppView;
-window.playItemView = new ItemView({model:playItem})
 
-var element = playItemView.render().el;
-
-playItemView.model.save({'item': 'java', 'category': 'language'})
-
-$("#list").append(element);
