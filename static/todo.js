@@ -1,3 +1,5 @@
+//if you ever return to this, list items are <li>s. duhface.
+
 function init() {
 	var datas = []
 	$.getJSON('/listsJSON', function(json){
@@ -24,7 +26,7 @@ function init() {
 			var olditem = $(clicked).text()
 			var title = $(clicked).parent().children('#listHeader').children('h3').text()
 			console.log(title)
-			$("<input class='itemedit' type='text'></input>").val(olditem).insertAfter(clicked).focus()
+			$("<input class='itemedit' type='text'></input><p class='delete'>x</a>").val(olditem).insertAfter(clicked).focus()
 			$(clicked).remove()
 			$('input.itemedit').blur(function(event){
 				$.ajax('/editItem/' + title +'/' + olditem +'/' + $(event.target).val());
@@ -50,7 +52,7 @@ function init() {
 		});
 
 		$('div.button.thing').click(function(event){
-			$("<input class='newItem' type='text'></input>").insertBefore($(event.target).parent());
+			$("<input class='newItem' type='text'></input>").insertBefore($(event.target).parent()).focus();
 			$('input.newItem').blur(function(event){
 				var title = $(event.target).parent().children('#listHeader').children('h3').text()
 				$.ajax('/newItem/' + title +'/' + $(event.target).val());

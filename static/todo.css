@@ -3,7 +3,7 @@ body {
 	font-weight: 300;
 }
 
-.list {
+#list {
 	width: 500px;
 	margin: 0 auto;
 	background-color: #f8ffa7;
@@ -17,14 +17,17 @@ p {
 
 .item{
 	padding: 10px;
+	display: inline;
+	width: 60px;
 }
 
-.itemedit, .newItem {
-	font-size: 1em;
+.item-edit, .newItem {
+	font-size: 0.75em;
 	clear: both;
 	float: none;
-	display: block;
-	margin: 15px 10px;
+	display: none;
+	margin-left: 10px;
+	width: 60px;
 }
 
 .titleedit, .newtitle {
@@ -32,6 +35,10 @@ p {
 	float: left;
 	font-size: 1.17em;
 	display: block;
+}
+
+.list-check {
+	float: left;
 }
 
 h1 {
@@ -77,3 +84,36 @@ h3 {
 	height: 35px;
 	border-bottom: 1px solid blue;
 }
+
+.delete {
+	width:20px;
+	height:20px;
+	border-radius:50px;
+	font-size:.75em;
+	color: white;
+	text-align:center;
+	text-decoration:none;
+	background:red;
+	display: inline-block;
+	margin: 5px;
+}
+
+.delete:hover {
+	background-color: #772727;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+li.editing  .item-edit{
+	display: inline;
+}
+
+li.editing  .item{
+	display: none;
+}
+
+
+

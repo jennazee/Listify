@@ -4,9 +4,10 @@
 	<head>
 		<title>TODO</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script src="{{ url_for('static', filename='jquery-1.7.2.min.js') }}" type="text/javascript"></script>
-		<script src="{{ url_for('static', filename='d3/d3.v2.js') }}" type="text/javascript"></script>
+		<script src="{{url_for('static', filename='jquery-1.7.2.min.js')}}" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='todo.css') }}"/>
+		<script src="http://documentcloud.github.com/underscore/underscore.js" type="text/javascript"></script>
+		<script src="{{url_for('static', filename='backbone-min.js')}}" type="text/javascript"></script>
 
 	</head>
 	
@@ -16,13 +17,18 @@
 	
 	<body>
 		<div id='listWrapper'>
-			<!-- Content rendered dynamically -->
+			<div id='list'><!-- Content rendered dynamically -->
+				<input id='new-item' type='text'/>
+			</div>
+
 		</div>
 		<div id='add'>
 			<div id = 'newList' class='button'><p>Add a list</p></div>
 		</div>
 
-		<script src="{{ url_for('static', filename='todo.js') }}" type="text/javascript"></script>
+		<!--<script src="{{ url_for('static', filename='todo.js') }}" type="text/javascript"></script>-->
+
+		<script src="{{ url_for('static', filename='backbone-todo.js') }}" type="text/javascript"></script>
 
 	</body>
 
